@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>منصة التداول</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background: #0a0a0a; color: #fff; font-family: 'Tajawal', sans-serif; margin: 0; padding: 20px; }
+        .header { text-align: center; padding: 30px; background: linear-gradient(90deg, #00f260, #0575e6); border-radius: 15px; }
+        .card { background: #1a1a1a; padding: 20px; border-radius: 15px; margin-top: 20px; border: 1px solid #333; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: center; border-bottom: 1px solid #333; }
+        .up { color: #00f260; } .down { color: #ff4d4d; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>TRADING SIM PRO</h1>
+        <p>منصة التداول الاحترافية</p>
+    </div>
+    <div class="card">
+        <h2>الاسعار اللحظية</h2>
+        <table>
+            <tr><th>الاصل</th><th>السعر</th><th>التغير</th></tr>
+            <tr><td>BTC/USD</td><td>68,420 $</td><td class="up">+2.3%</td></tr>
+            <tr><td>ETH/USD</td><td>3,510 $</td><td class="down">-1.1%</td></tr>
+        </table>
+    </div>
+    <div class="card">
+        <h2>شارت BTC/USD</h2>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        new Chart(document.getElementById('myChart'), { type: 'line', data: { labels: ['9ص','10ص','11ص','12ظ','1ظ'], datasets: [{ label: 'BTC', data: [67400, 67600, 68200, 67900, 68420], borderColor: '#00f260' }] } });
+    </script>
+</body>
+</html>
